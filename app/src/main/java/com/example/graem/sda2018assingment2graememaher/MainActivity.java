@@ -14,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "Assign2";
 
-    /**Citations and references **/
+    /**Sources:
+     https://developer.android.com/studio/
+     https://stackoverflow.com/
+     **/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickEmailCompose(View view){
         Intent emailComposeIntent = new Intent(this, composeEmail.class);// onclick intent compose email launch java cass composeEmail
         startActivity(emailComposeIntent);
-
+        Log.v(TAG, "Email Intent Launched");
     }
 
     public void onClickButtonSend(View view){           //Onclick event Send
@@ -72,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         email.putExtra(Intent.EXTRA_SUBJECT, sub); // Subject added to email app
         email.putExtra(Intent.EXTRA_TEXT,compose); //Content added to email app
         startActivity(Intent.createChooser(email, "Send Email")); // start activity
-        Log.v(TAG, "Email Template Opened");
+        Log.v(TAG, "Email Choice Opened"); //Gmail or email
     }
 
 

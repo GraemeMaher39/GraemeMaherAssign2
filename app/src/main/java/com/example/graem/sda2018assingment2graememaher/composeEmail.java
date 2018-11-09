@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 import java.util.ArrayList;
 
 public class composeEmail extends AppCompatActivity {
+    public static final String TAG = "Assign2";
     public static final String TO_FIELD =   "To"; // String created to contain To field
     public static final String SUB_FIELD = "Sub";// String created to contain Subject field
     public static final String COMPOSE_FIELD ="Compose"; // String created to contain Compose field
@@ -30,6 +32,8 @@ public class composeEmail extends AppCompatActivity {
         backToMain.putExtra(TO_FIELD, to);
         backToMain.putExtra(SUB_FIELD,sub);
         backToMain.putExtra(COMPOSE_FIELD,compose);
-        startActivity(backToMain);                     //Start activity
+        Log.v(TAG, "Email Set in correct fields in activity main");
+        startActivity(backToMain);                     //Start activity backToMain
+
     }
 }
