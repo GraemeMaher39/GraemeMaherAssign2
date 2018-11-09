@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
         String compose = buttonIntent.getStringExtra(composeEmail.COMPOSE_FIELD); // sets contents of compose as COMPOSE_FIELD
         Intent email = new Intent(Intent.ACTION_SENDTO);
         email.setType("message/rfc822"); //opens only email apps - Stack OverFlow
-        email.setData(Uri.parse("mailto:"+to)); // name or recipient
-        email.putExtra(Intent.EXTRA_SUBJECT, sub); // Subject
-        email.putExtra(Intent.EXTRA_TEXT,compose); //Content
+        email.setData(Uri.parse("mailto:"+to)); // name or recipient added to email app
+        email.putExtra(Intent.EXTRA_SUBJECT, sub); // Subject added to email app
+        email.putExtra(Intent.EXTRA_TEXT,compose); //Content added to email app
         startActivity(Intent.createChooser(email, "Send Email")); // start activity
         Log.v(TAG, "Email Template Opened");
     }
