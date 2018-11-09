@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sda2018Assingment2GraemeMaher</string>
+    <string name="implicit_intent_open_camera">"\n"Implicit Intent: Open Camera"\n"</string>
+    <string name="implicit_intent_view_picture">"\n"Implicit Intent: View Picture"\n"</string>
+    <string name="explicit_intent_call_an_activity">"\n"Explicit Intent: Call an Activity"\n"</string>
+    <string name="send_email">Send</string>
+    <string name="camera">dispatchTakePictureIntent</string>
+</resources>
